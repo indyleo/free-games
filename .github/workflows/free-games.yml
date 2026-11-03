@@ -1,0 +1,14 @@
+name: Free games
+
+on:
+  schedule:
+    - cron: '17 */2 * * *'   # every 2 hours (at :17)
+  workflow_dispatch:          # adds a "Run workflow" button
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ahmad3a4/free-games-discord@v1
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
