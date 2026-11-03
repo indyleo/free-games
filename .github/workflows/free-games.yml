@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: ahmad3a4/free-games-discord@v1
-        with:
-          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          with:
+            webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+            stores: steam
+            max-posts: 10
